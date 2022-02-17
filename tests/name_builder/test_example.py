@@ -2,12 +2,9 @@
 
 # from pytest_mock import mocker
 
-from hypothesis import given, strategies
-
 from src.name_builder import name_builder
 
 
-@given(strategies.booleans())
-def test_do_something(boolean: bool) -> None:
+def test_geneate_name() -> None:
     """An name_builder test."""
-    assert name_builder.NameBuilder.do_something(boolean) is True
+    assert name_builder.NameBuilder.generate_name() == "asdf"

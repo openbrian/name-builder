@@ -6,6 +6,5 @@ class NameBuilder:
     """The Foo class provides sample methods."""
 
     @staticmethod
-    def do_something(value: bool = False) -> bool:
-        """Return true, always."""
-        return value or True
+    def generate_name() -> str:
+        return "asdf"

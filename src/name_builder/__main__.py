@@ -11,8 +11,8 @@ from src.name_builder.name_builder import NameBuilder
 
 
 def main() -> None:
-    """Execute the Something standalone command-line tool."""
-    _ = NameBuilder.do_something()
+    """Execute the standalone command-line tool."""
+    _ = NameBuilder.generate_name()
 
 
 def init() -> None:
