@@ -1,14 +1,14 @@
-"""Test the main module in example."""
+"""Test the main module in name_builder."""
 
 from pytest import raises
 from pytest_mock import MockerFixture
 
-from src.example import __main__
-from src.example.__main__ import Example, init, main
+from src.name_builder import __main__
+from src.name_builder.__main__ import NameBuilder, init, main
 
 
-def test_main_should_call_example(mocker: MockerFixture) -> None:
-    mocked_do_something = mocker.patch.object(Example, "do_something")
+def test_main_should_call_name_builder(mocker: MockerFixture) -> None:
+    mocked_do_something = mocker.patch.object(NameBuilder, "do_something")
     main()
     mocked_do_something.assert_called_once_with()
 

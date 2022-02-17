@@ -4,9 +4,9 @@ ignore_missing_imports = true
 strict = true
 
 [tool.poetry]
-name = "template"
+name = "name-builder"
 version = "0.1.0"
-description = "Template for new python projects."
+description = "username builder"
 authors = ["Brian DeRocher <brian@derocher.org>"]
 packages = [
     { include = "src" },

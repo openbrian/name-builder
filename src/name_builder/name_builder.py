@@ -2,7 +2,7 @@
 
 
 # pylint: disable=too-few-public-methods
-class Example:
+class NameBuilder:
     """The Foo class provides sample methods."""
 
     @staticmethod

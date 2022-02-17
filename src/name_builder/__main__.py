@@ -7,12 +7,12 @@
 import os
 import sys
 
-from src.example.example import Example
+from src.name_builder.name_builder import NameBuilder
 
 
 def main() -> None:
     """Execute the Something standalone command-line tool."""
-    _ = Example.do_something()
+    _ = NameBuilder.do_something()
 
 
 def init() -> None:

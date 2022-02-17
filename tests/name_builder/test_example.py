@@ -4,10 +4,10 @@
 
 from hypothesis import given, strategies
 
-from src.example import example
+from src.name_builder import name_builder
 
 
 @given(strategies.booleans())
 def test_do_something(boolean: bool) -> None:
-    """An example test."""
-    assert example.Example.do_something(boolean) is True
+    """An name_builder test."""
+    assert name_builder.NameBuilder.do_something(boolean) is True
