@@ -1,10 +1,17 @@
 """Test the Something module. Add more tests here, as needed."""
 
-# from pytest_mock import mocker
+from unittest.mock import Mock, patch
 
-from src.name_builder import name_builder
+from src.name_builder.name_builder import NameBuilder
 
 
-def test_geneate_name() -> None:
+@patch.object(NameBuilder, "get_colors")
+def test_generate_name(mock_get_colors: Mock) -> None:
     """An name_builder test."""
-    assert name_builder.NameBuilder.generate_name() == "asdf"
+    colors: list[str] = ["red", "blue", "chartreuse"]
+    mock_get_colors.return_value = colors
+    assert NameBuilder.generate_name() in colors
+
+
+def test_get_colors() -> None:
+    assert "chartreuse" in NameBuilder.get_colors()

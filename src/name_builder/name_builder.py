@@ -7,4 +7,9 @@ class NameBuilder:
 
     @staticmethod
     def generate_name() -> str:
-        return "asdf"
+        return NameBuilder.get_colors()[0]
+
+    @staticmethod
+    def get_colors() -> list[str]:
+        colors: list[str] = ["red", "blue", "chartreuse"]
+        return colors
