@@ -1,5 +1,7 @@
 """The Foo module provides things and functions."""
 
+from random import choice
+
 
 # pylint: disable=too-few-public-methods
 class NameBuilder:
@@ -7,7 +9,7 @@ class NameBuilder:
 
     @staticmethod
     def generate_name() -> str:
-        return NameBuilder.get_colors()[0]
+        return choice(NameBuilder.get_colors())
 
     @staticmethod
     def get_colors() -> list[str]:
