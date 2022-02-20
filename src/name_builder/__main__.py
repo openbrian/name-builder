@@ -12,7 +12,7 @@ from src.name_builder.name_builder import NameBuilder
 
 def main() -> None:
     """Execute the standalone command-line tool."""
-    _ = NameBuilder.generate_name()
+    print(NameBuilder.generate_name())
 
 
 def init() -> None:
