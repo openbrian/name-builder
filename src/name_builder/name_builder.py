@@ -1,5 +1,6 @@
 """The Foo module provides things and functions."""
 
+from csv import reader
 from random import choice, seed
 from typing import Optional
 
@@ -16,5 +17,6 @@ class NameBuilder:
 
     @staticmethod
     def get_colors() -> list[str]:
-        colors: list[str] = ["red", "blue", "chartreuse"]
-        return colors
+        with open("src/name_builder/colors.csv", encoding="utf-8") as file:
+            colors = reader(file)
+            return [color[0] for color in colors]

@@ -12,3 +12,11 @@ $ pip install poetry
 $ pip install -e .
 $ poetry install
 ```
+
+# Notes
+
+https://en.wikipedia.org/wiki/List_of_colors
+
+# To Do
+
+See also pastel colors

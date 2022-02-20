@@ -1,6 +1,7 @@
 """Test the Something module. Add more tests here, as needed."""
 
 from random import choice, seed
+from unittest import mock
 from unittest.mock import Mock, patch
 
 from pytest_randomly import default_seed
@@ -19,4 +20,6 @@ def test_generate_name(mock_get_colors: Mock) -> None:
 
 
 def test_get_colors() -> None:
-    assert "chartreuse" in NameBuilder.get_colors()
+    mock_open = mock.mock_open(read_data="red\nblue\nchartreuse")
+    with patch("builtins.open", mock_open):
+        assert "chartreuse" in NameBuilder.get_colors()
