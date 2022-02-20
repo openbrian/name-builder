@@ -42,7 +42,7 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.pytest.ini_options]
 minversion = "6.2"
-addopts = "--verbose --doctest-modules -ra --cov src --cov-fail-under 100 --cov-report term --cov-report html --randomly-seed=4223"  # Consider adding --pdb
+addopts = "--verbose --doctest-modules -ra --cov src --cov-fail-under 100 --cov-report term --cov-report html"  # Consider adding --pdb
 #doctest_optionflags = "IGNORE_EXCEPTION_DETAIL"
 testpaths = [
     "tests",
