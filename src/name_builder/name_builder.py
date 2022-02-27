@@ -17,6 +17,7 @@ class NameBuilder:
 
     @staticmethod
     def get_colors() -> list[str]:
-        with open("src/name_builder/colors.csv", encoding="utf-8") as file:
+        colors_file = "src/name_builder/data/colors.csv"
+        with open(colors_file, encoding="utf-8") as file:
             colors = reader(file)
             return [color[0] for color in colors]
