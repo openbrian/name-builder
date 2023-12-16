@@ -18,8 +18,11 @@ $ poetry install
 ## Adjectives
 
 * colors
-* flower, plant, tree
+* flavors
+* herbs
 * landscape
+* nature
+* odors
 * weather
 
 ## Nouns
@@ -27,7 +30,6 @@ $ poetry install
 * animals
 * clouds
 * flowers
-* mexican beans
 * minerals
 * nature
 * rocks and stones
@@ -37,7 +39,7 @@ $ poetry install
 
 ### Food
 
-* herbs
+* fruits
 * hops
 * mexican beans
 * nuts
@@ -66,6 +68,26 @@ https://namingschemes.com/Scientists
 https://namingschemes.com/Trees
 
 List of civilizations
+
+eats
+shops for
+cleans
+cooks
+drinks
+likes
+feeds pets
+builds
+wash clothing
+
+
+has a pet
+
+# Forms
+
+Joe from location
+Joe the thing
+Joe the student of thing
+Joe of the lake
 
 
 # To Do

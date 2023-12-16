@@ -12,7 +12,8 @@ from src.name_builder.name_builder import NameBuilder
 
 def main() -> None:
     """Execute the standalone command-line tool."""
-    print(NameBuilder.generate_name())
+    parameters: dict[str, str] = {"name": "brian"}
+    print(NameBuilder.generate_name(parameters))
 
 
 def init() -> None:
