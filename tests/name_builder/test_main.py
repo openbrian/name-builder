@@ -13,7 +13,7 @@ from src.name_builder.__main__ import NameBuilder, init, main
 def test_main_should_call_name_builder(mock_generate_name: Mock) -> None:
     """main should call generate_name"""
     main()
-    mock_generate_name.assert_called_once_with()
+    mock_generate_name.assert_called_once_with({"name": "brian"})
 
 
 def test_init_should_call_main(mocker: MockerFixture) -> None:

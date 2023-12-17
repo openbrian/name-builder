@@ -1,0 +1,23 @@
+adjective,physics,color,colors.csv
+adjective,eaten,flavor,flavors.csv
+adjective,seen,nature,nature_adjectives.csv
+adjective,eaten,herbs,herbs.csv
+adjective,seen,landscape,landscape_adjectives.csv
+adjective,physics,odors,odors.csv
+adjective,seen,weather,weather_adjectives.csv
+noun,objects,animal,animals.csv
+noun,objects,cloud,clouds.csv
+noun,objects,flower,flowers.csv
+noun,objects,mineral,minerals.csv
+noun,objects,nature,nature.csv
+noun,objects,rocks and stones,rocks_and_stones.csv
+noun,objects,star,stars.csv
+noun,objects,tree,trees.csv
+noun,objects,weather events,weather_events.csv
+noun,food,fruit,fruits.csv
+noun,food,hops,hops.csv
+noun,food,mexican beans,mexican_beans.csv
+noun,food,nut,nuts.csv
+noun,food,vegetable,noun_food_vegetables.csv
+noun,food,cooking_action,noun_cooking_action.csv
+noun,location,moon,moons.csv
