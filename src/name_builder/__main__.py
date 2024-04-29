@@ -4,6 +4,7 @@
 # https://docs.python.org/3/library/runpy.html
 # https://docs.python.org/3/reference/import.html#special-considerations-for-main
 
+import getpass
 import os
 import sys
 
@@ -12,7 +13,7 @@ from src.name_builder.name_builder import NameBuilder
 
 def main() -> None:
     """Execute the standalone command-line tool."""
-    parameters: dict[str, str] = {"name": "brian"}
+    parameters: dict[str, str] = {"name": getpass.getuser()}
     print(NameBuilder.generate_name(parameters))
 
 

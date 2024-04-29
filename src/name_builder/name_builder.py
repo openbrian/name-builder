@@ -22,6 +22,7 @@ class NameBuilder:
         form: list[str] = (
             form_ if form_ is not None else list(choice(NameBuilder.get_forms()))
         )
+        print(form)
         result = []
         for term in form:
             operator, value = term.split(":")
@@ -30,12 +31,12 @@ class NameBuilder:
             elif operator == "parameter":
                 param_val: Optional[str] = parameters.get(value)
                 if param_val is None:
-                    raise Exception(f"Could not find parameter {value}.")
+                    raise KeyError(f"Could not find parameter {value}.")
                 result.append(param_val)
             elif operator in ("adjective", "noun"):
                 lst = NameBuilder.get_list(operator, value)
                 result.append(choice(lst)[0])
-        return "_".join(result).lower()
+        return "-".join(result).lower()
 
     @staticmethod
     def get_forms() -> list[list[str]]:
@@ -49,6 +50,7 @@ class NameBuilder:
             lists = list(reader(lists_file))
         # print(lists)
         filename: Optional[str] = None
+        # Currently ignoring the second item.
         for operator, _, list_name, listfile in lists:
             if operator == operator_ and name == list_name:
                 filename = listfile

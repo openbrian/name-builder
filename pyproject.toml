@@ -25,11 +25,9 @@ pytest-cov = "^3.0.0"
 mypy = "^0.931"
 hypothesis = "^6.36.0"
 pre-commit = "^2.17.0"
-setuptools = "^60.5.0"
 pytest-mock = "^3.7"
 
 [tool.pylint.'MESSAGES CONTROL']
-max-modules-lines = 1000
 disable = [
     "missing-function-docstring", # C0116
 ]

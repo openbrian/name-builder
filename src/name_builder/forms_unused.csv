@@ -1,0 +1,9 @@
+parameter:name,literal:eats,adjective:flavor,noun:fruit
+parameter:name,literal:eats,adjective:flavor,noun:nut
+parameter:name,literal:eats,adjective:herbs,noun:fruit
+parameter:name,literal:eats,adjective:herbs,noun:nut
+parameter:name,literal:from,adjective:weather,noun:moon
+parameter:name,literal:the,adjective:color,noun:animal
+parameter:name,literal:the,adjective:color,noun:flower
+parameter:name,literal:the,noun:vegetable,noun:cooking_action
+noun:name_generated,literal:the,noun:simple_job,literal:from,noun:city

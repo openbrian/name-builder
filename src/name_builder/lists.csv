@@ -21,3 +21,6 @@ noun,food,nut,nuts.csv
 noun,food,vegetable,noun_food_vegetables.csv
 noun,food,cooking_action,noun_cooking_action.csv
 noun,location,moon,moons.csv
+noun,objects,city,noun_cities.csv
+noun,objects,simple_job,noun_simple_jobs.csv
+noun,proper,name_generated,name_generated.csv

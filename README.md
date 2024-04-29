@@ -1,6 +1,33 @@
 name-builder
 ===
 
+name-builder is a simple username generator with the goal of providing a diversity of usernams based on list of common names, places, adjectives, and objects.
+
+# Setup
+
+```shell
+python -m venv venv
+source venv/bin/activate
+pip install --upgrade pip
+pip install poetry
+poetry install
+pre-commit install
+```
+
+# Usage
+
+```shell
+source venv/bin/activate
+python -m src.name_builder
+```
+
+# Example Output
+
+```text
+❯ python -m src.name_builder
+['noun:name_generated', 'literal:from', 'adjective:weather', 'noun:moon']
+katelin-from-cloudy-caliban
+```
 
 # Build
 
@@ -13,83 +40,44 @@ $ pip install -e .
 $ poetry install
 ```
 
-# Data
+# How does it work?
 
-## Adjectives
+It currently generates 1 username at a time.
 
-* colors
-* flavors
-* herbs
-* landscape
-* nature
-* odors
-* weather
+First it selects a random form from `forms.csv`, for example.
 
-## Nouns
+| term1 | term 2 | term 3 | term 4 | ... |
+| --- | --- | --- | --- | --- |
+| noun:name_generated | literal:from | noun:city |
+| noun:name_generated | literal:from | adjective:weather | noun:moon |
 
-* animals
-* clouds
-* flowers
-* minerals
-* nature
-* rocks and stones
-* stars
-* trees
-* weather events
+Alternate forms are in forms_unused.csv.  To use them, just move the desired line into forms.cvs.
 
-### Food
+TODO: Find a good way to select and deselect forms; probably CLI arguments.
 
-* fruits
-* hops
-* mexican beans
-* nuts
+Types of terms:
 
-### Moons
+* literal means use the given word on the right side.
+* parameter means use an input parameter from the CLI (TODO).
+* noun - look up a noun from the list
+* adjective - look up an adjective from the list.
 
-* mars
-* jupiter
-* neptune
-* pluto
-* saturn
-* uranus
+noun:name_generated is a list of names, at this time hard coded to medievalish names.
 
-# Notes
+"adjective:weather" means look up a random form of weather.  There's a list of lists, lists.csv which specifies which file to use.
 
-https://en.wikipedia.org/wiki/List_of_birds_by_common_name
-https://en.wikipedia.org/wiki/List_of_cat_breeds
-https://en.wikipedia.org/wiki/List_of_colors
-https://en.wikipedia.org/wiki/List_of_dog_breeds
-https://en.wikipedia.org/wiki/List_of_fish_common_names
-https://en.wikipedia.org/wiki/List_of_garden_plants
-https://en.wikipedia.org/wiki/List_of_plants_by_common_name
+There are numerous lists included.  Some may not even be included in forms, for example mythical_characters.
 
-https://namingschemes.com/Birds
-https://namingschemes.com/Scientists
-https://namingschemes.com/Trees
+After resolving all terms, just join them together and print it.
 
-List of civilizations
+# Testing
 
-eats
-shops for
-cleans
-cooks
-drinks
-likes
-feeds pets
-builds
-wash clothing
+Since it uses randomness, it can also set a seed for testing.
 
+# Contributions
 
-has a pet
+Please install the git pre-commit hook.  Only commit if all tests pass.
 
-# Forms
+If you add code, add a unit test.
 
-Joe from location
-Joe the thing
-Joe the student of thing
-Joe of the lake
-
-
-# To Do
-
-See also pastel colors
+No global variables.  Stay functional.

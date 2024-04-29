@@ -35,7 +35,7 @@ def test_generate_name(
     expected_flavor: str = choice(items)[0]
     expected_fruit: str = choice(items)[0]
     mock_get_list.return_value = items
-    expected_color: str = f"brian_eats_{expected_flavor}_{expected_fruit}"
+    expected_color: str = f"brian-eats-{expected_flavor}-{expected_fruit}"
     assert NameBuilder.generate_name(parameters, default_seed) == expected_color
 
 
